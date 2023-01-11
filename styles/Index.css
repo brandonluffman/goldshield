@@ -36,7 +36,7 @@ p {
   align-items: center;
     justify-content:center;
     text-align: center;
-    background:url('../public/landing-bg.jpg');
+    background:url('../public/landing-bg.webp');
     background-size: cover;
     align-items: center;
 
@@ -47,7 +47,7 @@ p {
     padding-top:142px;
     color:white;
   /* background-image:linear-gradient(to bottom, rgba(255,255,255,0) 20%, rgba(0,0,0,0.7) 100%),url('../public/landing-bg.jpg'); */
-  background-image:linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,0,0,0.5) 50%),url('/landing-bg.jpg');
+  background-image:linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,0,0,0.5) 50%),url('/landing-bg.webp');
 overflow: hidden;
 padding:142px 1rem 0rem 1rem;
 }

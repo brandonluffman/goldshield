@@ -9,7 +9,7 @@
     border: 1px solid rgba(100,100,100,0.3);
     margin:1rem 1rem;
     padding:5rem 1rem;
-    background-image:linear-gradient(to bottom, rgba(255,255,255,0) 20%, rgba(0,0,0,0.7) 100%),url('../public/landing-bg.jpg');
+    background-image:linear-gradient(to bottom, rgba(255,255,255,0) 20%, rgba(0,0,0,0.7) 100%),url('../public/landing-bg.webp');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -21,9 +21,6 @@
 }
 
 
-.too {
-    color:black;
-}
 .service-grid-item:hover {
     transform: scale(1.1);
 }
@@ -40,35 +37,35 @@
 
 
 .service-grid-2 {
-    background-image:linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,0,0,0.3) 0%),url('../public/radon.jpeg');
+    background-image:linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,0,0,0.3) 0%),url('../public/radon.webp');
 }
 
 .service-grid-3 {
-    background-image:linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,0,0,0.3) 0%),url('../public/septic.jpeg');
+    background-image:linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,0,0,0.3) 0%),url('../public/septic.webp');
 }
 
 .service-grid-4 {
-    background-image:linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,0,0,0.3) 0%),url('../public/sewer-scope.png');
+    background-image:linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,0,0,0.3) 0%),url('../public/sewer-scope.webp');
 }
 
 .service-grid-5 {
-    background-image:linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,0,0,0.3) 0%),url('../public/water-test.jpeg');
+    background-image:linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,0,0,0.3) 0%),url('../public/water-test.webp');
 }
 
 .service-grid-6 {
-    background-image:linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,0,0,0.3) 0%),url('../public/water-system.jpeg');
+    background-image:linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,0,0,0.3) 0%),url('../public/water-system.webp');
 }
 
 .service-grid-7 {
-    background-image:linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,0,0,0.3) 0%),url('../public/well-inspection.jpeg');
+    background-image:linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,0,0,0.3) 0%),url('../public/well-inspection.webp');
 }
 
 .service-grid-8 {
-    background-image:linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,0,0,0.3) 0%),url('../public/wind-inspect.jpeg');
+    background-image:linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,0,0,0.3) 0%),url('../public/wind-inspect.webp');
 }
 
 .service-grid-9 {
-    background-image:linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,0,0,0.3) 0%),url('../public/insect.jpeg');
+    background-image:linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,0,0,0.3) 0%),url('../public/insect.webp');
 }
 
 @media (max-width: 650px) {
