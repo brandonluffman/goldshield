@@ -1,251 +1,146 @@
 import React, { useState, Component, useEffect } from 'react';
+import Link from 'next/link';
 import Head from 'next/head';
 import {GraphQLClient, gql} from 'graphql-request';
-import BlogCard from '../components/BlogCard';
-import Nav from '../components/Nav';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {  faArrowUpRightFromSquare, faCircle, faCheckCircle, faCheck, faCode, faMagnifyingGlassChart, faEnvelopeCircleCheck, faHandshake, faRocket } from '@fortawesome/free-solid-svg-icons';
-import {  faFacebookF, faInstagram, faLinkedin, faLinkedinIn, faTwitter , } from '@fortawesome/free-brands-svg-icons';
-import Link from 'next/link';
-import Script from 'next/script';
-import { UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
-import $ from 'jquery';
-import {Helmet} from "react-helmet";
-import Footer from '../components/Footer';
 import Contact from '../components/Contact';
-import IndexPage from '../components/IndexPage';
 import NewsletterSubscribe from '../components/NewsletterSubscribe';
-import {BsTools,BsFillAwardFill, BsAward, BsCursorFill} from 'react-icons/bs';
-import { GrDeploy } from 'react-icons/gr';
-import { MdDeveloperMode, MdOutlineSpeed, MdAnalytics, MdDraw } from 'react-icons/md';
-import { SiMicrostrategy, SiAltiumdesigner } from 'react-icons/si';
-
-
-
-const graphcms = new GraphQLClient(
-"https://api-us-east-1.hygraph.com/v2/cl6ftpszc2n0f01uhbzh3cz7s/master"
-);
-
-const QUERY = gql`
-  {
-    posts {
-      id
-      title
-      description
-      datePublished
-      slug
-      content {
-        html
-      }
-      author {
-        name
-        avatar {
-          url
-        }
-      }
-      coverPhoto {
-        publishedAt
-        createdBy {
-          id
-        }
-        url
-      }
-      tag {
-        tagDrop
-      }
-    }
-  }
-`;
-
-export async function getStaticProps() {
-  const { posts } = await graphcms.request(QUERY);
-  return {
-    props: {
-      posts,
-    },
-    revalidate: 30,
-  };
-}
-
-
-
+import Footer from '../components/Footer';
+import Navbar from '../components/Navbar';
+import {MdLocationPin} from 'react-icons/md';
+import {BsArrowRight} from 'react-icons/bs'
+import Testimonials from '../components/Testimonials';
+import LocationLinks from '../components/LocationLinks';
+import ServicesGrid from '../components/ServicesGrid';
 
 
 export default function Home({ posts }) {
 
-
-  const [checked, setChecked] = React.useState(true);
-
   return (
     <>
-    <IndexPage />
-      <Nav />
-        <div className="container-fluid landing-container" id="home">
-          <div className="row landing-row">
-            <h3 className="landing-subheader">Phantom Technologies</h3>
-            <h1 className="landing-header">Websites That Convert</h1>
-            <div className="landing-btns">
-              <Link href='/project'><button className="landing-btn launch-btn">Start a Project</button></Link>
-              <a href='#about'><button className="landing-btn learn-btn">About Us</button></a>
-            </div>
+     {/* <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-W3Q83E2JE3"/>
+        <Script
+        id='google-analytics'
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+        __html: `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-W3Q83E2JE3', {
+        page_path: window.location.pathname,
+        });
+        `,
+        }}
+        /> */}
+    <Head>
+          <title>Gold Shield Home Inspection | Connecticut Home Inspectors</title>
+          <meta name="description" content="Gold Shield Home Inspection is a home inspector servicing Fairfield County, Litchfield County & Surrounding Areas"/>
+          <meta charSet="utf-8" />
+          <meta name="robots" content="index, follow" />
+          <meta name="viewport" content="width=device-width, initial-scale=1"/>
+          <link rel="icon" type="image/png" href="/goldshield-logo.webp" alt="Favicon" />
+          <link rel="apple-touch-icon" href="/goldshield-logo.webp" /> 
+          <link rel="canonical" href="https://goldshieldhomeinspection.com/"/>
+            <meta property="og:type" content="article" />
+            <meta property="og:title" content="TITLE OF YOUR POST OR PAGE" />
+            <meta property="og:description" content="DESCRIPTION OF PAGE CONTENT" />
+            <meta property="og:image" content="LINK TO THE IMAGE FILE" />
+            <meta property="og:url" content="PERMALINK" />
+            <meta property="og:site_name" content="SITE NAME" />
+            <meta name="twitter:title" content="TITLE OF POST OR PAGE" />
+            <meta name="twitter:description" content="DESCRIPTION OF PAGE CONTENT" />
+            <meta name="twitter:image" content="LINK TO IMAGE" />
+            <meta name="twitter:site" content="@USERNAME" />
+            <meta name="twitter:creator" content="@USERNAME" />
+      </Head>
+
+      <Navbar />
+      <div className='landing-container'>
+        <div className='test'>
+        <h3 className='landing-header'><span className='header-color'>Gold Shield</span> Home Inspection</h3>
+        <h2 className='landing-subheader'>#1 Connecticut Home Inspector</h2>
+        <div className='landing-btns'>
+        <Link href='/booking'><button type='button' className='landing-btn booking-btn'>Book An Inspection</button></Link>
+        <Link href='/about'><button type='button' className='landing-btn learn-btn'>Learn More</button></Link>
+        </div>
+        </div>
+      </div>
+      <div className='stats-container'>
+
+      </div>
+      <div className='about-container'>
+        {/* <p className='container-header about-header'>About</p> */}
+        <div className='about-content-container'>
+          <div className='about-img-container'>
+        <img src='goldshield-logo.webp' className='about-img' alt='Brand Logo'></img>
+        </div>
+        <div className='about-content-div'>
+        <section className='about-paragraph'>
+          <p className='about-paragraph-content'>Gold Shield Home Inspection Services is the <br></br><b className='about-paragraph-content-bold'>Top Rated Home Inspector in Fairfield County</b></p>
+        </section>
+        <p className='about-paragraph-description'>
+        If you&#39;re buying or selling a home, before you sign any papers, make sure the property in question has been thoroughly assessed. Protect your financial investment with the help of Gold Shield Home Inspection Service. Our Fairfield County inspectors will empower you with all the information you need to make sound, confident decisions about your future. From the plumbing to the electrical to the roof and attic, we&#39;ll cover every inch of your property, inside and out, and find any issues or areas of concern that may exist.
+        </p>
+        <p className='about-paragraph-assist'>
+          <b>Assisting Buyers, Sellers & Real Estate Professionals</b>
+        </p>
+        <p className='about-paragraph-description'>
+        Looking to purchase a home within Fairfield County? Reach out to Gold Shield Home Inspection Services to inspect and discuss the properties condition with an educational approach. With over 10 years in the Home Inspection business, Gold Shield will provide top tier services.
+        </p>
+        </div>
+        </div>
+        <div className='about-stats'>
+          <div className='about-stat'>
+            <p className='about-stat-number'>2000+</p>
+            <p className='about-stat-title'>Home Inspections</p>
+          </div>
+          <div className='about-stat middle-stat'>
+            <p className='about-stat-number'>50+</p>
+            <p className='about-stat-title'>Towns Serviced</p>
+          </div>
+          <div className='about-stat'>
+            <p className='about-stat-number'>12+</p>
+            <p className='about-stat-title'>Years In The Business</p>
           </div>
         </div>
-
-        <div className="container-fluid about-container" id="about">
-          <div className="row about-row">
-            <h3 className="container-header about-header">About Us</h3>
-            <div className="about-content-div">
-              <div className='about-imgs-div'>
-              <img src='/img.png' className="about-img about-brand-img" alt='logo' loading="lazy" />
-              </div>
-              <div className='about-content-text-div'>
-                  <h4 className='about-content-header'>ELEVATE Your Business with Phantom</h4>
-                  <p className='about-content-p'>Leading Web Development firm with professional design and development experience. We build sophisticated websites and full-stack web applications.</p>
-                  <hr className='about-content-line'></hr>
-                   <div className='web-imgs-div'>
-                  <div className='website-img web-img-1'></div>
-                  <div className='website-img web-img-2'></div>
-              </div>
-              </div>
-            </div>
-          </div>
+      </div>
+      <div className='services-container'>
+        <p className='container-header services-header'>Services</p>
+        <ServicesGrid />
+      </div>
+      <div className='locations-cosntainer'>
+      <p className='container-header locations-header'>Locations</p>
+      <div className='locations-container-wrapper'>
+      <div className='location-img-container'>
+        <h2 className='location-description-header'>Top Fairfield County Home Inspector</h2>
+        <p className='location-description'>If you&#39;re buying or selling a home, before you sign any papers, make sure the property in question has been thoroughly assessed. Protect your financial investment with the help of Gold Shield Home Inspection Service. Our Fairfield County inspectors will empower you with all the information you need to make sound, confident decisions about your future. From the plumbing to the electrical to the roof and attic, we&#39;ll cover every inch of your property, inside and out, and find any issues or areas of concern that may exist.</p>
+        <div className='location-description-img-div'>
+        <img src='/inspector.webp' className='location-inspection-img' alt='Fairfield County Graphic'></img>
         </div>
-
-
-        <div className="container-fluid services-container" id="services">
-          <div className="row">
-            <h3 className="container-header testimonials-header">Services</h3>
-            <div className='services-div'>
-              <div className='business-website-div service-div'>
-                <div className='service-img-div img-div-1'>
-                <img src='../landing.png' className='service-img service-img-1'></img>
-                </div>
-                <div className='service-content'>
-                <p className='service-subheader'>Service</p>
-                <hr className='service-hr'></hr>
-                <h2 className='service-header'>Business Websites</h2>
-                <p className='service-description'>User-centered design that boosts lead generation and increases revenue.</p>
-                <div className='service-btn-div'>
-                <Link href='/project'><button type='button' className='service-btn service-project-btn'>Start a Project</button></Link>
-                <Link href='/project'><button type='button' className='service-btn service-learn-btn'>Learn More</button></Link>
-                </div>
-                </div>
-              </div>
-              <div className='ecommerce-website-div service-div mobile-flip'>
-                <div className='service-content service-content-flipped'>
-                <p className='service-subheader'>Service</p>
-                <hr className='service-hr'></hr>
-                <h2 className='service-header'>Ecommerce Websites</h2>
-                <p className='service-description'>Our Ecommerce specialists design and build high converting websites included with all modern Ecommerce features.</p>
-                <div className='service-btn-div'>
-                <Link href='/project'><button type='button' className='service-btn service-project-btn'>Start a Project</button></Link>
-                <Link href='/project'><button type='button' className='service-btn service-learn-btn'>Learn More</button></Link>
-                </div>
-                </div>
-                <div className='service-img-div img-div-2'>
-                <img src='../ecommerce.jpeg' className='service-img service-img-2'></img>
-                </div>
-              </div> 
-              <div className='ecommerce-website-div service-div'>
-              <div className='service-img-div img-div-3'>
-                <img src='../custom-web.jpeg' className='service-img service-img-3'></img>
-                </div>
-                <div className='service-content service-content'>
-                <p className='service-subheader'>Service</p>
-                <hr className='service-hr'></hr>
-                <h2 className='service-header'>Custom Websites</h2>
-                <p className='service-description'>Have a design in mind? Our developers will work effortlessly to provide you with a website fit to your specifications.</p>
-                <div className='service-btn-div'>
-                <Link href='/project'><button type='button' className='service-btn service-project-btn'>Start a Project</button></Link>
-                <Link href='/project'><button type='button' className='service-btn service-learn-btn'>Learn More</button></Link>
-                </div>
-                </div>
-              </div> 
-              <div className='web-apps-div service-div mobile-flip'>
-                <div className='service-content-flipped'>
-                <p className='service-subheader'>Service</p>
-                <hr className='service-hr'></hr>
-                <h2 className='service-header'>Web Applications</h2>
-                <p className='service-description'>Our Web App Development team builds full-stack web and front-end applications using modern tech stacks for innovative tech brands and companies.</p>
-                <div className='service-btn-div'>
-                <Link href='/project'><button type='button' className='service-btn service-project-btn'>Start a Project</button></Link>
-                <Link href='/project'><button type='button' className='service-btn service-learn-btn'>Learn More</button></Link>
-                </div>
-                </div>
-                <div className='service-img-div img-div-4'>
-                <img src='../web-app.jpeg' className='service-img service-img-4'></img>
-                </div>
-              </div>
-            </div>
-            <div className='service-attributes'>
-              <h6 className='serv-attributes-header'>Our Development Process</h6>
-              <div className='development-phases'>
-                <div className='dev-phase'>
-                <p className='phase-header'>Phase 1</p>
-                <p className='dev-phase-name'>Research & Analysis</p>
-                <MdAnalytics className='phase-icon' />
-                </div>
-                <div className='dev-phase'>
-                <p className='phase-header'>Phase 2</p>
-                <p className='dev-phase-name'>Planning & Strategy</p>
-                <SiMicrostrategy className='phase-icon' />
-                </div>
-                <div className='dev-phase'>
-                <p className='phase-header'>Phase 3</p>
-                <p className='dev-phase-name'>Design</p>
-                <MdDraw className='phase-icon' />
-                </div>
-                <div className='dev-phase'>
-                <p className='phase-header'>Phase 4</p>
-                <p className='dev-phase-name'>Development</p>
-                <MdDeveloperMode className='phase-icon' />
-                </div>
-                <div className='dev-phase'>
-                <p className='phase-header'>Phase 5</p>
-                <p className='dev-phase-name'>Testing</p>
-                <MdOutlineSpeed className='phase-icon' />
-                </div>
-                <div className='dev-phase'>
-                <p className='phase-header'>Phase 6</p>
-                <p className='dev-phase-name'>Deployment</p>
-                <GrDeploy className='phase-icon' />
-                </div>
-              </div>
-            </div>
-          </div>
+      </div>
+      <div className='location-content-container'>  
+      <div className='county-img'>
+      <img src='fairfield-county.png' className='location-img' alt='Fairfield County Graphic'></img>
+      </div>
+      <div className='counties-container'>
+        <LocationLinks />
         </div>
-
-{/*
-        <div className="container-fluid blog-container" id="blog">
-          <div className="row blog-row">
-            <h3 className="container-header testimonials-header">Blog</h3>
-            <main className='home-blog'>
-            {posts.slice(-3).reverse().map((post) => (
-              <BlogCard
-                title={post.title}
-                author={post.author}
-                coverPhoto={post.coverPhoto}
-                key={post.id}
-                datePublished={post.datePublished}
-                slug={post.slug}
-                tag={post.tag}
-                description={post.description}
-                className='blog-card'
-              />
-            ))}
-          </main>
-          </div>
-          <div className='see-more-row'>
-            <Link href='/blogs'><button className='blog-link'>See All</button></Link>
-          </div>
-        </div>
-*/}
-
-        <div className="container-fluid contact-container" id="contact">
-          <h3 className="container-header contact-header">Get In Touch</h3>
-          <Contact />
-        </div>
-        <Footer />
+      </div>
+      </div>
+      <div className='location-btn-div'>
+      <Link href='/locations'><button type='button' className='view-locations-btn'>View All Locations<BsArrowRight className='arrow-icon'/></button></Link>
+      </div>
+      </div>
+      <div className='testimonials-container'>
+        <p className='container-header testimonial-header'>Testimonials</p>
+        <p className='testimonial-subheader'>See what our clients have to say</p>
+        <Testimonials />
+      </div>
+      <div className='contact-container'>
+      <p className='container-header contact-header'>Contact</p>
+        <Contact /> 
+      </div>
+      <Footer />
     </>
 
   );

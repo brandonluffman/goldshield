@@ -1,44 +1,50 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {  faFacebookF, faInstagram, faLinkedin, faLinkedinIn, faTwitter , } from '@fortawesome/free-brands-svg-icons';
-import NewsletterSubscribe from './NewsletterSubscribe';
-
-
+import {BsInstagram, BsFacebook, BsLinkedin, BsTwitter} from 'react-icons/bs';
+import {FaInstagram} from 'react-icons/fa'
+import Link from 'next/link';
+import NewsletterForm from './NewsletterForm';
+import {GoMail } from 'react-icons/go';
+import {IoIosPhonePortrait} from 'react-icons/io';
 
 const Footer = () => {
   return (
     <div>
-    <footer className="footer">
-      <div className="container-fluid footer-container" id="services">
-        <div className="row footer-contact-row">
-          <div className="col footer-contact-col">
-              <div className='footer-brand-img'>
-                <img src='/img.png' alt="Logo" className='footer-brand-logo' loading="lazy" />
-              </div>
-              <div className='social-icons'>
-                <a href='https://twitter.com/PhxntomTech' target='_blank' rel='noreferrer'><FontAwesomeIcon className="fa-brands fa-twitter social-icon" icon={faTwitter}></FontAwesomeIcon></a>
-    
-                <a href='https://www.facebook.com/profile.php?id=100084723462596' target='_blank' rel='noreferrer'><FontAwesomeIcon className="fa-brands fa-facebook social-icon" icon={faFacebookF}><a href='https://www.linkedin.com/company/phantom-seo-web-design/'></a></FontAwesomeIcon></a>
-
-                <a href='https://www.instagram.com/phxntomtechnologies/' target='_blank' rel='noreferrer'><FontAwesomeIcon className="fa-brands fa-instagram social-icon" icon={faInstagram}><a href='https://www.linkedin.com/company/phantom-seo-web-design/'></a></FontAwesomeIcon></a>
-
-                <a href='https://www.linkedin.com/company/phxntomtech' target='_blank' rel='noreferrer'><FontAwesomeIcon className="fa-brands fa-linkedin social-icon" icon={faLinkedinIn}><a href='https://www.linkedin.com/company/phantom-seo-web-design/'></a></FontAwesomeIcon></a>
-              </div>
-          </div>
-          <div className="col footer-newsletter-col">
-            <h6 className="newsletter-header">Join Our Newsletter</h6>
-            <NewsletterSubscribe />
-          </div>
-          </div>
-        <div className="row footer-copyright-row">
-          <div className="col">
-            <p className="privacy-policy"><a className='privacy-policy-link' target='_blank' rel='noreferrer' href='https://www.privacypolicygenerator.info/live.php?token=X9rYsibwbs1UKYQ41C7KL0IBJSIEOkts'>Privacy Policy</a> | 
-            <a className='privacy-policy-link' target='_blank' rel='noreferrer' href='https://www.termsofusegenerator.net/live.php?token=WtIAwIaSx5ilU5RgC3s2N2AtWAptbnTh'>Terms Of Use</a></p>
-          </div>
-        </div>
+    <div className="footer-container">
+      <div className='footer-brand-div'>
+      <img src='/goldshield-logo.webp' className='footer-img' alt='Brand Logo'></img>
+      <div className='footer-socials'>
+      <FaInstagram className='footer-social instagram-icon'/>
+      <BsFacebook className='footer-social facebook-icon'/>
+      <BsLinkedin className='footer-social linkedin-icon' />
+      <BsTwitter className='footer-social twitter-icon'/>
       </div>
-    </footer>
+      </div>
+      <div className='footer-links-container'>
+      <div className='footer-links'>
+        <div className='footer-links-header'><p className='footer-link-header'>Gold Shield</p></div>
+        <div className='footer-link'><Link href='/'>Home</Link></div>
+        <div className='footer-link'><Link href='/about'>About</Link></div>
+        <div className='footer-link'><Link href='/services'>Services</Link></div>
+        <div className='footer-link'><Link href='/locations'>Locations</Link></div>
+        <div className='footer-link'><Link href='/booking'>Contact Us</Link></div>
+      </div>
+      <div className='footer-links'>
+        <div className='footer-links-header'><p className='footer-link-header'>Support</p></div>
+        <div className='footer-link'><Link href='/'>Privacy Policy</Link></div>
+        <div className='footer-link'><Link href='/'>Terms of Use</Link></div>
+        {/* <div className='footer-link'><Link href='/'>FAQs</Link></div> */}
+      </div>
+      <div className='footer-links'>
+        <p className='footer-contact-content-header'>Contact</p>
+        <p className='footer-contact'><GoMail className='footer-contact-icon' /> chris@goldshield.co</p>
+        <p className='footer-contact'><IoIosPhonePortrait className='footer-contact-icon' /> (917) 733-8909</p>
+      </div>
+    </div>
+    </div>
+    <div className='footer-copyright'>
+      <p className='footer-copyright-content'>Copyright © {new Date().getFullYear()} Gold Shield Home Inspection Services - All Rights Reserved.</p>
+    </div>
     </div>
   )
 }
 
-export default Footer
+export default Footer;

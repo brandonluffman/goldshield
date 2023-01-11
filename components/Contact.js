@@ -2,8 +2,12 @@ import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendarDays, faCircleCheck, faLocationDot, faEnvelope } from '@fortawesome/free-solid-svg-icons';
-
-
+import {BsArrowRight} from 'react-icons/bs';
+import {GoMail } from 'react-icons/go';
+import {IoIosPhonePortrait} from 'react-icons/io';
+import {CiMapPin} from 'react-icons/ci';
+import {TfiLocationPin} from 'react-icons/tfi';
+import Link from "next/link";
 
 const Contact = () => {
   const form = useRef();
@@ -18,10 +22,10 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        "service_maf7etb",
-        "template_ckdsqpq",
+        "service_wovzae5",
+        "template_8c00lf5",
         form.current,
-        "q1bvSeQBMko2AZ2ax"
+        "2bm-KH1_GoJ7mHTQ_"
       )
       .then(
         (result) => {
@@ -43,7 +47,7 @@ const Contact = () => {
   return (
     <div className="contact-form-div">
       <form ref={form} onSubmit={sendEmail} className='contact-form' id='myForm'>
-        <h4 className="contact-form-header">Contact Us</h4>
+        {/* <h4 className="contact-form-header">Contact Us</h4> */}
         <label className='contact-form-item name-label'>Name</label>
         <input type="text" name="user_name" className='contact-form-item name-input'  placeholder="Enter Your Name" required />
         <label className='contact-form-item email-label'>Email</label>
@@ -60,7 +64,14 @@ const Contact = () => {
       </form>
      
       <div className="contact-sides">
-        <p>Not a fan of forms?</p>
+        <p className="contact-sides-header">Get in touch!</p>
+        <div className="contact-info">
+        <p className="contact-info-item"><GoMail className="footer-contact-icon" /><a mailto='chris@goldshield.co'>chris@goldshield.co</a></p>
+        <p className="contact-info-item"><IoIosPhonePortrait className="footer-contact-icon" />(917) 733-8909</p>
+        <p className="contact-info-item"><TfiLocationPin className="footer-contact-icon" /> Ridgefield, CT</p>
+        </div>
+        <p className="contact-book-text">Looking to book an inspection?</p>
+        <Link type='button' href='/booking'><button className='contact-book-btn'>Book Here<BsArrowRight className='arrow-icon'></BsArrowRight></button></Link>
       </div>
       </div>
   );

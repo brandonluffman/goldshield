@@ -1,0 +1,442 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html, * {
+    font-family: 'Red Hat Display', sans-serif;
+    scroll-behavior: smooth;
+
+}
+body {
+    overflow-x:hidden;
+}
+img {
+    position:relative !important;
+  }
+h3 {
+    line-height: 1;
+}
+a:hover {
+    color:inherit;
+}
+p {
+    margin-bottom:0rem;
+}
+.landing-container, .about-container, .services-container, .locations-container, .testimonials-container, .blog-container, .contact-container {
+    height:100vh;
+    padding:0rem 2rem;
+}
+.container-header {
+    text-align: center;
+    font-size:3rem;
+    overflow: hidden;
+}
+.landing-container {
+    height:110vh;
+     display: flex;
+  justify-content: center;
+  align-items: center;
+    justify-content:center;
+    text-align: center;
+    background:url('../public/landing-bg.jpg');
+    background-size: cover;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: center top 0px;
+    background-attachment: fixed;
+    margin-top:-142px;
+    color:white;
+  /* background-image:linear-gradient(to bottom, rgba(255,255,255,0) 20%, rgba(0,0,0,0.7) 100%),url('../public/landing-bg.jpg'); */
+  background-image:linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,0,0,0.5) 50%),url('../public/landing-bg.jpg');
+overflow: hidden;
+}
+
+.landing-header {
+    font-size:5.5rem;
+    margin-top: 4rem;
+    line-height: -2vh !important;
+    overflow: hidden;
+}
+.header-color {
+    color: rgb(186, 166, 97);
+
+}
+.landing-subheader {
+    font-size:2.5rem;
+    overflow: hidden;
+
+}
+.landing-btns {
+    margin-top:4rem;
+}
+.landing-btn {
+    background-color: rgb(186, 166, 97);
+    border:none;
+    padding:0.8rem 1.7rem;
+    color:white;
+    border-radius:35px;
+    margin:0rem 1rem;
+    font-weight: 600;
+    font-size: 1.2rem;
+    transition:0.2s all ease;
+    box-shadow:1px 3px 12px rgb(79, 79, 79);
+}
+
+.landing-btn:hover {
+    transform: translateY(-1px);
+}
+
+@media (max-width: 650px) {
+    .landing-header {
+        font-size:4.5rem;
+        margin-top: 4rem;
+        line-height:8vh;
+        margin-bottom:2rem;
+    }
+    .landing-subheader {
+        font-size:2rem;
+        overflow: hidden;
+    
+    }
+
+    .landing-btn {
+        margin-bottom:1rem;
+    }
+  }
+
+/* About */
+
+.about-container {
+padding:4rem 2rem 2rem 2rem;
+margin-bottom:3rem;
+height:auto;
+}   
+
+.about-img-container {
+    width:30%;
+    justify-content: center;
+    text-align: center;
+    padding-top:5rem;
+}
+
+.about-img {
+    width:60%;
+    text-align: center;
+    justify-content: center;
+}
+
+.about-content-container {
+    display: flex;
+    margin-bottom:2rem;
+}
+
+.about-content-div {
+    padding:0rem 2rem;
+    width:70%;
+}
+
+.about-paragraph {
+    display: flex;
+}
+.about-paragraph-content {
+    font-size:1.5rem;
+    margin-bottom:2rem;
+}
+
+.about-paragraph-content-bold {
+    font-size:2rem;
+
+}
+
+.about-paragraph-description {
+    margin-bottom:4rem;
+}
+
+.about-paragraph-assist {
+    margin-bottom:2rem;
+    font-size:1.5rem;
+}
+
+
+
+.about-stats {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.about-stat-number {
+    font-size:2rem;
+    color:rgb(186, 166, 97);
+}
+.about-stat-title {
+    font-size:1.3rem;
+}
+
+
+
+/* Services */
+
+.services-container {
+    height:auto;
+    margin-bottom:4rem;
+}
+
+.services-header {
+    margin-bottom:3rem;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 300px);
+
+    justify-content: center;
+    text-align: center;
+}
+.service-grid-item {
+    border: 1px solid rgba(100,100,100,0.3);
+    margin:1rem 1rem;
+    padding:5rem 1rem;
+    background-image:linear-gradient(to bottom, rgba(255,255,255,0) 20%, rgba(0,0,0,0.7) 100%),url('../public/landing-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color:white;
+    font-size:4rem;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: 0.3s ease all;
+}
+
+.service-grid-item:hover {
+    transform: scale(1.1);
+}
+
+.service-grid-title {
+    font-size:2.5rem;
+    overflow: hidden;
+
+}
+
+.service-grid-1 {
+    background-image:linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,0,0,0.3) 0%),url('../public/mold-testing.jpeg');
+}
+
+
+.service-grid-2 {
+    background-image:linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,0,0,0.3) 0%),url('../public/radon.jpeg');
+}
+
+.service-grid-3 {
+    background-image:linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,0,0,0.3) 0%),url('../public/septic.jpeg');
+}
+
+.service-grid-4 {
+    background-image:linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,0,0,0.3) 0%),url('../public/sewer-scope.png');
+}
+
+.service-grid-5 {
+    background-image:linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,0,0,0.3) 0%),url('../public/water-test.jpeg');
+}
+
+.service-grid-6 {
+    background-image:linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,0,0,0.3) 0%),url('../public/water-system.jpeg');
+}
+
+.service-grid-7 {
+    background-image:linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,0,0,0.3) 0%),url('../public/well-inspection.jpeg');
+}
+
+.service-grid-8 {
+    background-image:linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,0,0,0.3) 0%),url('../public/wind-inspect.jpeg');
+}
+
+.service-grid-9 {
+    background-image:linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,0,0,0.3) 0%),url('../public/insect.jpeg');
+}
+
+@media (max-width: 650px) {
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 400px);
+    }
+  }
+
+/*  Testimonials */
+
+.testimonials-container {
+    height:auto;
+    margin-bottom:4rem;
+}
+
+.testimonial-header {
+    margin-bottom:1rem;
+}
+
+.testimonial-subheader {
+    margin-bottom:4rem;
+    font-size: 2rem;
+    text-align: center;
+    color:black;
+font-weight:300;
+}
+
+.testimonial-image {
+    width:10%;
+}
+
+
+
+/* Blog */
+
+.blog-container {
+    height:auto;
+    margin-bottom:6rem;
+}
+
+.blog-header {
+    margin-bottom:4rem;
+}
+.blog-container-slider {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 400px);
+    justify-content: center;
+    text-align: center;
+    margin-bottom:2rem;
+}
+.view-blog-btn {
+    background-color: rgb(186, 166, 97);
+    color:white;
+    border-radius: 20px;
+    padding: 0.3rem 0.8rem;
+    border:none;
+    box-shadow: 1px 5px 12px rgba(0,0,0,0.2);
+    margin-right:4rem;
+    transition:0.2s all ease;
+}
+
+.view-blog-btn:hover {
+    transform: translateY(-1px);
+}
+
+.blog-btn-div {
+    justify-content: right;
+    text-align: right;
+    overflow: visible !important;
+}
+
+.arrow-icon {
+    margin-left:1rem;
+}
+/* Locations */
+.locations-container {
+    height:auto;
+    margin-bottom:4rem;
+    padding:0rem 2rem !important;
+    overflow-x: hidden;
+
+}
+.locations-header {
+    margin-bottom:4rem;
+}
+.locations-container-wrapper {
+    display: flex;
+    padding:0rem 4rem !important;
+
+}
+.location-content-container {
+    width:50%;
+    text-align: center;
+}
+.location-img-container {
+    width:50%;
+    text-align: center;
+    padding-right: 6rem;
+    text-align: left;
+}
+
+.location-img {
+    width:45%;
+    margin-bottom:6rem;
+}
+
+.location-description {
+    text-align:left;
+    line-height: 2.5;
+    margin-bottom:6rem;
+}
+
+.view-locations-btn {
+    background-color: rgb(186, 166, 97);
+    color:white;
+    border-radius: 20px;
+    padding: 0.3rem 0.8rem;
+    border:none;
+    box-shadow: 1px 5px 12px rgba(0,0,0,0.2);
+    margin-right:4rem;
+    margin-bottom:1rem;
+    transition:0.2s all ease;
+    margin-bottom:4rem;
+}
+
+.view-locations-btn:hover {
+    transform: translateY(-1px);
+}
+
+.location-btn-div {
+    justify-content: right;
+    text-align: right;
+}
+
+
+.location-description-header {
+    text-align: left;
+    margin-bottom:1rem;
+    overflow: hidden;
+
+}
+
+.location-inspection-img {
+    width:100%;
+    border-radius: 20px;
+}
+
+.location-description-img-div {
+    justify-content: center;
+    text-align: center;
+}
+
+
+@media (max-width: 900px) {
+    .location-content-container {
+        width:100%;
+    }
+    .location-img-container {
+        width:100%;
+    }
+    .locations-container-wrapper {
+        display: block;
+        padding: 0rem 2rem;
+    }
+    .location-inspection-img {
+        width:80%;
+    }
+
+    .location-img-container {
+        padding:0rem;
+        margin-bottom:4rem;
+    }
+  }
+
+
+
+
+
+/* Contact */
+
+.contact-container {
+    height:auto;
+    margin-bottom:8rem;
+}
+
+.contact-header {
+    margin-bottom:2rem;
+}
