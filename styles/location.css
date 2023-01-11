@@ -35,10 +35,19 @@
 
 .nearby-header {
     font-size:1.8rem;
-    margin-bottom:3rem;
+    margin-bottom:2rem;
     text-align: center;
 }
 
+.town-nearby-div {
+    text-align: center;
+}
+
+.nearby-hr {
+    width:10%;
+    margin:auto;
+    margin-bottom:2rem;
+}
 .town-links-header {
     font-size:2rem;
     margin-bottom:2rem;
@@ -58,11 +67,6 @@
     background-color: rgb(244, 244, 244);
 }
 
-
-
-.too {
-    color:black;
-}
 .town-book-btn {
     background: none;
     border:none;

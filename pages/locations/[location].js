@@ -77,6 +77,7 @@ export default function Town({ town }) {
                 </div>
                 <div className="town-nearby-div">
                     <h6 className="nearby-header">More locations nearby to Bethel</h6>
+                    <hr className="nearby-hr"></hr>
                     <LocationLinks />
                 </div>
             </div>

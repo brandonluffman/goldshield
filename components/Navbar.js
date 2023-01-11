@@ -27,10 +27,18 @@ const Navbar = () => {
       setNavbar(false);
     }
   };
+
+
   //
   useEffect(() => {
     window.addEventListener("scroll", changeFontOnScroll, true);
     return () => window.removeEventListener("scroll", changeFontOnScroll);
+  }, []);
+
+  useEffect(() => {
+    if (window.innerWidth < 750) {
+      setNavActive(null);
+    }
   }, []);
 
   return (
