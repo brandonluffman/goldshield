@@ -21,8 +21,9 @@
 }
 
 
-
-
+.too {
+    color:black;
+}
 .service-grid-item:hover {
     transform: scale(1.1);
 }

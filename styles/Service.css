@@ -18,7 +18,9 @@
     padding-left:2rem;
     line-height:5vh;
 }
-
+.too {
+    color:black;
+}
 
 
 @media (max-width: 900px) {

@@ -68,6 +68,10 @@ input:focus, textarea:focus {
     border:none;
     background:none;
 }
+.too {
+    color:black;
+}
+
 
 .contact-book-btn {
     background: none;
