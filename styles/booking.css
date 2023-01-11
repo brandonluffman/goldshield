@@ -121,8 +121,8 @@
     font-size:1rem;
     text-align: center;
     margin-right:1.25rem;
-
 }
+
 .radio-label:hover {
     cursor:pointer;
     background-color: rgb(230,230,230);
@@ -202,8 +202,34 @@ input[type='file'] {
         margin-left: 5%;
     }
 
+    .budget-label {
+        padding: 1rem 5rem;
+      }
+
+      .radio-label {
+        margin:0.5rem 0.5rem;
+      }
+
+      .form-app-selection {
+        margin-bottom:2rem;
+    }
+
+    .project-form-btn {
+        padding: 1rem 1.5rem;
+        font-size:1.3rem;
+        border:none;
+        border-radius:40px;
+        box-shadow: 1px 8px 15px rgba(0, 0, 0, 0.2);
+        transition:0.2s all ease;
+        z-index:999 !important;
+        font-weight: 500;
+        margin-bottom: 6rem;
+        transition: 0.2s ease-in-out;
+        background-color: rgb(186, 166, 97);
+        color:rgb(250,250,250);
+        width:auto;
+        display: flex;
+    }
+
 }
 
-.too {
-    color:black;
-}

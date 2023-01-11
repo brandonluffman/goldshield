@@ -3,7 +3,6 @@ import Link from 'next/link';
 import Head from 'next/head';
 import {GraphQLClient, gql} from 'graphql-request';
 import Contact from '../components/Contact';
-import NewsletterSubscribe from '../components/NewsletterSubscribe';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import {MdLocationPin} from 'react-icons/md';
@@ -57,7 +56,7 @@ export default function Home({ posts }) {
       <Navbar />
       <div className='landing-container'>
         <div className='test'>
-        <h3 className='landing-header'><span className='header-color'>Gold Shield</span> Home Inspection</h3>
+        <h1 className='landing-header'><span className='header-color'>Gold Shield</span> Home Inspection</h1>
         <h2 className='landing-subheader'>#1 Connecticut Home Inspector</h2>
         <div className='landing-btns'>
         <Link href='/booking'><button type='button' className='landing-btn booking-btn'>Book An Inspection</button></Link>
@@ -76,7 +75,7 @@ export default function Home({ posts }) {
         </div>
         <div className='about-content-div'>
         <section className='about-paragraph'>
-          <p className='about-paragraph-content'>Gold Shield Home Inspection Services is the <br></br><b className='about-paragraph-content-bold'>Top Rated Home Inspector in Fairfield County</b></p>
+          <h3 className='about-paragraph-content'>Gold Shield Home Inspection Services is the <br></br><b className='about-paragraph-content-bold'>Top Rated Home Inspector in Fairfield County</b></h3>
         </section>
         <p className='about-paragraph-description'>
         If you&#39;re buying or selling a home, before you sign any papers, make sure the property in question has been thoroughly assessed. Protect your financial investment with the help of Gold Shield Home Inspection Service. Our Fairfield County inspectors will empower you with all the information you need to make sound, confident decisions about your future. From the plumbing to the electrical to the roof and attic, we&#39;ll cover every inch of your property, inside and out, and find any issues or areas of concern that may exist.

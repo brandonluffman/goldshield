@@ -69,7 +69,7 @@ export default function Town({ town }) {
                 </div>
                 <div className="town-links">
                         <div>
-                            <h6 className="town-links-header">Looking to book an inspection in {town.Town}?</h6>
+                            <h4 className="town-links-header">Looking to book an inspection in {town.Town}?</h4>
                         </div>
                         <div>
                             <Link href='/booking'><button className="town-book-btn">Book Here<BsArrowRight className="town-arrow"/></button></Link>

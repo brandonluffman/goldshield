@@ -69,12 +69,12 @@ const services = ({ services }) => {
             <h3 className="included-item-header">Structural - <span className='color-less'>Home Inspections</span></h3>
             <div className="included-desc-div">
               <img src='/structural.jpeg' className="included-desc-img" alt='Inspection Image'></img>
-              <h6 className="included-desc">
-                <FaRegDotCircle className="included-icon"/>Condition of the Structural Components, including the Attic and Crawl Space or Basement <br></br> 
-                <FaRegDotCircle className="included-icon"/>Construction Methods and Materials  <br></br> 
-                <FaRegDotCircle className="included-icon"/>Evidence of moisture Foundation Movement  <br></br> 
-                <FaRegDotCircle className="included-icon"/>Water Penetration
-                </h6>
+              <ul className="included-tabs">
+                  <li className="tabs-div">Condition of the Structural Components, including the Attic and Crawl Space or Basement</li>
+                  <li className="tabs-div">Construction Methods and Materials</li>
+                  <li className="tabs-div">Evidence of moisture Foundation Movement</li>
+                  <li className="tabs-div">Water Penetration</li>
+              </ul>
             </div>
           </div>
 
@@ -84,11 +84,11 @@ const services = ({ services }) => {
             <h3 className="included-item-header">Roofing - <span className='color-less'>Home Inspections</span></h3>
             <div className="included-desc-div">
               <img src='/roofing.jpeg' className="included-desc-img" alt='Inspection Image'></img>
-              <h6 className="included-desc">
-              <FaRegDotCircle className="included-icon"/>Materials, Condition and Performance of the Roof Coverings, Flashings, Chimneys, Gutters and Downspouts  <br></br>
-              <FaRegDotCircle className="included-icon"/>Vents & Trim  <br></br>
-              <FaRegDotCircle className="included-icon"/>Skylight, Chimney & other Roof Penetrations
-              </h6>
+              <ul className="included-tabs">
+              <li className="tabs-div">Materials, Condition and Performance of the Roof Coverings, Flashings, Chimneys, Gutters and Downspouts</li>
+              <li className="tabs-div">Vents & Trim</li> 
+              <li className="tabs-div">Skylight, Chimney & other Roof Penetrations</li>
+              </ul>
                </div>
           </div>
 
@@ -99,13 +99,13 @@ const services = ({ services }) => {
             <h3 className="included-item-header">Exterior - <span className='color-less'>Home Inspections</span></h3>
             <div className="included-desc-div">
               <img src='/exterior.jpeg' className="included-desc-img" alt='Inspection Image'></img>
-              <h6 className="included-desc">
-              <FaRegDotCircle className="included-icon"/>Materials and Condition of the Exterior Cladding, Doors and Windows, Driveway and Walkways <br></br> 
-              <FaRegDotCircle className="included-icon"/>Deck, Porches, Stoops & Railings  <br></br>
-              <FaRegDotCircle className="included-icon"/>Lot Grading & Drainage  <br></br>
-              <FaRegDotCircle className="included-icon"/>Eaves, Soffit & Fascia  <br></br>
-              <FaRegDotCircle className="included-icon"/>Garage Doors, Safety Sensors & Openers 
-              </h6>
+              <ul className="included-tabs">
+                  <li className="tabs-div">Materials and Condition of the Exterior Cladding, Doors and Windows, Driveway and Walkways</li> 
+                  <li className="tabs-div">Deck, Porches, Stoops & Railings</li>  
+                  <li className="tabs-div">Lot Grading & Drainage</li>  
+                  <li className="tabs-div">Eaves, Soffit & Fascia</li>
+                  <li className="tabs-div">Garage Doors, Safety Sensors & Openers</li>
+                </ul>
             </div>
           </div>
 
@@ -116,8 +116,9 @@ const services = ({ services }) => {
             <h3 className="included-item-header">HVAC - <span className='color-less'>Home Inspections</span></h3>
             <div className="included-desc-div">
               <img src='/HVAC.jpeg' className="included-desc-img" alt='Inspection Image'></img>
-              <h6 className="included-desc"><FaRegDotCircle className="included-icon"/>General Condition and Operation of the Visible Portion of the Furnace and Air Conditioning Units, Duct Work, Thermostat, and Air Filter Fireplace Damper Door & Hearth
-              </h6>
+              <ul className="included-tabs">
+                  <li className="tabs-div">General Condition and Operation of the Visible Portion of the Furnace and Air Conditioning Units, Duct Work, Thermostat, and Air Filter Fireplace Damper Door & Hearth</li>
+            </ul>
             </div>
           </div>
 
@@ -127,14 +128,13 @@ const services = ({ services }) => {
             <h3 className="included-item-header">Electrical - <span className='color-less'>Home Inspections</span></h3>
             <div className="included-desc-div">
               <img src='/electrical.jpeg' className="included-desc-img" alt='Inspection Image'></img>
-              <h6 className="included-desc">
-
-              <FaRegDotCircle className="included-icon"/>General Condition of the Electrical Service  Electrical Panels, Breakers & Fuses Grounding & Bonding  <br></br>
-              <FaRegDotCircle className="included-icon"/>GFCIs & AFCIs  <br></br>
-              <FaRegDotCircle className="included-icon"/>Electrical Service Line & Meter Box <br></br>
-              <FaRegDotCircle className="included-icon"/>Main Disconnect & Service Amperage  <br></br>
-              <FaRegDotCircle className="included-icon"/>Random Testing of Switches & Outlets, Light Fixtures, and Ceiling Fans
-                </h6>
+              <ul className="included-tabs">
+                  <li className="tabs-div">General Condition of the Electrical Service  Electrical Panels, Breakers & Fuses Grounding & Bonding</li>
+                  <li className="tabs-div">GFCIs & AFCIs</li>
+                  <li className="tabs-div">Electrical Service Line & Meter Box</li>
+                  <li className="tabs-div">Main Disconnect & Service Amperage</li> 
+                  <li className="tabs-div">Random Testing of Switches & Outlets, Light Fixtures, and Ceiling Fans</li>
+             </ul>
             </div>
           </div>
 
@@ -145,12 +145,12 @@ const services = ({ services }) => {
             <h3 className="included-item-header">Plumbing - <span className='color-less'>Home Inspections</span></h3>
             <div className="included-desc-div">
               <img src='/plumbing.webp' className="included-desc-img" alt='Inspection Image'></img>
-              <h6 className="included-desc">
-              <FaRegDotCircle className="included-icon"/>General Condition and Operation of the Plumbing System  <br></br>
-              <FaRegDotCircle className="included-icon"/>All Visible Supply Piping and Drains  <br></br>
-              <FaRegDotCircle className="included-icon"/>Main Water Shut Off Valves Water Heating System  <br></br>
-              <FaRegDotCircle className="included-icon"/>Interior Plumbing Fixtures & Faucets Drainage Sump Pumps with Accessible Floats
-              </h6>
+              <ul className="included-tabs">
+              <li className="tabs-div">General Condition and Operation of the Plumbing System</li> 
+              <li className="tabs-div">All Visible Supply Piping and Drains</li>
+              <li className="tabs-div">Main Water Shut Off Valves Water Heating System</li> 
+              <li className="tabs-div">Interior Plumbing Fixtures & Faucets Drainage Sump Pumps with Accessible Floats</li>
+              </ul>
             </div>
           </div>
 
@@ -161,9 +161,9 @@ const services = ({ services }) => {
             <h3 className="included-item-header">Insulation and Ventilation - <span className='color-less'>Home Inspections</span></h3>
             <div className="included-desc-div">
               <img src='/insulation.jpeg' className="included-desc-img" alt='Inspection Image'></img>
-              <h6 className="included-desc">
-              <FaRegDotCircle className="included-icon"/>Overall Condition of Attic and Crawl Space Insulation & Ventilation Operation of Exhaust Fans
-              </h6>
+              <ul className="included-tabs">
+                <li className="tabs-div">Overall Condition of Attic and Crawl Space Insulation & Ventilation Operation of Exhaust Fans</li>
+              </ul>
             </div>
           </div>
 
@@ -174,9 +174,9 @@ const services = ({ services }) => {
             <h3 className="included-item-header">Interior Home Inspections</h3>
             <div className="included-desc-div">
               <img src='/interior.jpeg' className="included-desc-img" alt='Inspection Image'></img>
-              <h6 className="included-desc">
-              <FaRegDotCircle className="included-icon"/>General Condition of the Walls, Ceilings, Floor Coverings, Windows & Doors, Cabinets & Countertops
-              </h6>
+              <ul className="included-tabs">
+                <li className="tabs-div">General Condition of the Walls, Ceilings, Floor Coverings, Windows & Doors, Cabinets & Countertops</li>
+              </ul>
             </div>
           </div>
         </div>

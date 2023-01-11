@@ -64,7 +64,7 @@ export default function Service({ service }) {
                 </div>
                 <div className="town-links">
                         <div>
-                            <h6 className="town-links-header">Looking to book a {service.Name}?</h6>
+                            <h3 className="town-links-header">Looking to book a {service.Name}?</h3>
                         </div>
                         <div>
                             <Link href='/booking'><button className="town-book-btn">Book Here<BsArrowRight className="town-arrow"/></button></Link>

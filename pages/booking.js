@@ -90,7 +90,7 @@ const Booking = () => {
             <MdClear className='thankyou-close' onClick={closeBtn} />
         </div>
     <form ref={inquiry} onSubmit={sendEmail} className='project-form'>
-        <h6 className='project-header'>Hey, let&apos;s get you booked. <span className='hand-emoji'>&#128075;</span></h6>
+        <h1 className='project-header'>Hey, let&apos;s get you booked. <span className='hand-emoji'>&#128075;</span></h1>
         <p className='project-subheader'>I&apos;m interested in... *</p>
         <div className='form-app-selection'>
                 <input id='select-1' type="radio" value="Business Website" className="radio-input" name="interest" />

@@ -63,7 +63,7 @@ const about = () => (
         </div>
         <div className='about-content-div'>
           <section className='about-paragraph'>
-            <p className='about-paragraph-content'>Gold Shield Home Inspection Services is the <br></br><b className='about-paragraph-content-bold'>Top Rated Home Inspector in Fairfield County</b></p>
+            <h1 className='about-paragraph-content'>Gold Shield Home Inspection Services is the <br></br><b className='about-paragraph-content-bold'>Top Rated Home Inspector in Fairfield County</b></h1>
           </section>
           <p className='about-paragraph-description'>
           Here at Gold Shield Home Inspection Services, we are committed to upholding the highest standards in property inspection to ensure accurate, reliable results every time. From start to finish, you can be sure you&apos;re getting the trusted, dependable service you deserve every time you come to the seasoned pre-market inspection experts here at Gold Shield Home Inspection Services. If you&#39;re buying or selling a home, before you sign any papers, make sure the property in question has been thoroughly assessed. Protect your financial investment with the help of Gold Shield Home Inspection Service. Our Fairfield County inspectors will empower you with all the information you need to make sound, confident decisions about your future. From the plumbing to the electrical to the roof and attic, we&#39;ll cover every inch of your property, inside and out, and find any issues or areas of concern that may exist.

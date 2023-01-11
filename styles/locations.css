@@ -81,4 +81,8 @@
     .locations-page-img {
        margin-bottom:4rem;
     }
+
+    .location-page-container {
+        padding: 3rem 1rem 0rem 1rem
+    }
 }

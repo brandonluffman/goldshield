@@ -1,7 +1,6 @@
 import {BsInstagram, BsFacebook, BsLinkedin, BsTwitter} from 'react-icons/bs';
 import {FaInstagram} from 'react-icons/fa'
 import Link from 'next/link';
-import NewsletterForm from './NewsletterForm';
 import {GoMail } from 'react-icons/go';
 import {IoIosPhonePortrait} from 'react-icons/io';
 
