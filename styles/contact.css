@@ -55,6 +55,7 @@ input:focus, textarea:focus {
     width: auto;
     transition: 0.3s all ease-in-out;
 }
+
 .contact-form-btn:hover {
     transform: translateY(-1px);
     cursor: pointer;
